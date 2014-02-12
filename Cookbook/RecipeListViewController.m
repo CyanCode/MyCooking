@@ -8,6 +8,7 @@
 
 #import "RecipeListViewController.h"
 #import "DisplayContentViewController.h"
+#import "MoreViewController.h"
 
 @interface RecipeListViewController ()
 
@@ -56,6 +57,10 @@
     } if(tabBar.selectedItem == [tabBar.items objectAtIndex:2]){
         NSLog(@"Selected fb");
         [self performSegueWithIdentifier:@"toRecipeList" sender:self];
+    } if (tabBar.selectedItem == [tabBar.items objectAtIndex:3]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"More" bundle:nil];
+        MoreViewController *mvc = (MoreViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MoreViewController"];
+        [self presentViewController:mvc animated:YES completion:nil];
     }
 }
 

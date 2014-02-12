@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BfH-eg-Ew5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--More View Controller-->
+        <scene sceneID="7Bw-LF-82W">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="BfH-eg-Ew5" customClass="MoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gi6-z0-Vzz"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1g-5f-GQ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yj5-jk-wLD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="PSe-j5-u9E">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afD-vP-Ql3">
+                                <rect key="frame" x="96" y="20" width="128" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKd-ud-tfU" customClass="NavigationTabBar">
+                                <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Recipes" image="tomato-32.png" id="xAi-iq-4Cd"/>
+                                    <tabBarItem title="New" image="plus-32.png" id="g7A-Vi-p0k"/>
+                                    <tabBarItem title="List" image="pen.png" id="Xho-uX-Nwo"/>
+                                    <tabBarItem systemItem="more" id="uqo-qG-RPk"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ESX-aL-jHU">
+                                <rect key="frame" x="0.0" y="62" width="320" height="369"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="eFB-V0-Ntm">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFB-V0-Ntm" id="VcK-do-egN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-M5-Fba">
+                                                    <rect key="frame" x="256" y="0.0" width="64" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sid-Rf-N1t">
+                                                    <rect key="frame" x="20" y="0.0" width="228" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PSe-j5-u9E" firstAttribute="trailing" secondItem="VKd-ud-tfU" secondAttribute="trailing" id="2Ha-AH-sTm"/>
+                            <constraint firstItem="PSe-j5-u9E" firstAttribute="bottom" secondItem="VKd-ud-tfU" secondAttribute="bottom" id="KYh-ZY-Wff"/>
+                            <constraint firstItem="ESX-aL-jHU" firstAttribute="leading" secondItem="VKd-ud-tfU" secondAttribute="leading" id="NfN-Pf-bBC"/>
+                            <constraint firstAttribute="bottom" secondItem="VKd-ud-tfU" secondAttribute="bottom" id="S2l-f9-fny"/>
+                            <constraint firstItem="ESX-aL-jHU" firstAttribute="leading" secondItem="yj5-jk-wLD" secondAttribute="leading" id="VSB-Ya-8KX"/>
+                            <constraint firstItem="PSe-j5-u9E" firstAttribute="top" secondItem="yj5-jk-wLD" secondAttribute="top" id="YHk-Tz-QHg"/>
+                            <constraint firstItem="PSe-j5-u9E" firstAttribute="leading" secondItem="VKd-ud-tfU" secondAttribute="leading" id="bHw-vm-53h"/>
+                            <constraint firstItem="VKd-ud-tfU" firstAttribute="top" secondItem="ESX-aL-jHU" secondAttribute="bottom" id="d7m-IV-Ocb"/>
+                            <constraint firstItem="afD-vP-Ql3" firstAttribute="centerX" secondItem="ESX-aL-jHU" secondAttribute="centerX" id="eBs-RJ-Gyd"/>
+                            <constraint firstItem="VKd-ud-tfU" firstAttribute="trailing" secondItem="ESX-aL-jHU" secondAttribute="trailing" id="f6Y-Pp-O0b"/>
+                            <constraint firstAttribute="trailing" secondItem="PSe-j5-u9E" secondAttribute="trailing" id="fVR-OB-pbx"/>
+                            <constraint firstItem="afD-vP-Ql3" firstAttribute="top" secondItem="yj5-jk-wLD" secondAttribute="top" constant="20" symbolic="YES" id="ndM-p2-9Rl"/>
+                            <constraint firstItem="ESX-aL-jHU" firstAttribute="top" secondItem="afD-vP-Ql3" secondAttribute="bottom" constant="8" symbolic="YES" id="zXP-Th-ItF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customTabBar" destination="VKd-ud-tfU" id="ia1-mf-gNS"/>
+                        <outlet property="listTableView" destination="ESX-aL-jHU" id="OZj-8T-H53"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ClK-BC-pkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="640" height="960"/>
+        <image name="pen.png" width="32" height="32"/>
+        <image name="plus-32.png" width="32" height="32"/>
+        <image name="tomato-32.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xXk-Eh-58t">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lAa-1t-iXw">
+            <objects>
+                <viewController id="xXk-Eh-58t" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LlM-Bo-S0V"/>
+                        <viewControllerLayoutGuide type="bottom" id="bPs-oh-vue"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zL5-mg-Kk3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="CVP-7q-ZzG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AXN-7p-A0v">
+                                <rect key="frame" x="20" y="168" width="280" height="224"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pso-47-x6G">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pso-47-x6G" id="qz5-VV-GEH">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEt-r4-yqe" customClass="NavigationTabBar">
+                                <rect key="frame" x="0.0" y="430" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Recipes" image="tomato-32.png" id="lqo-KT-Qyl"/>
+                                    <tabBarItem title="New" image="plus-32.png" id="DgB-Zc-A6s"/>
+                                    <tabBarItem title="List" image="pen.png" id="gT1-xZ-iuF"/>
+                                    <tabBarItem systemItem="more" id="LQd-Zj-GZ4"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="zL5-mg-Kk3" id="hDd-NI-Gai"/>
+                                </connections>
+                            </tabBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add A New Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEI-g9-eve">
+                                <rect key="frame" x="20" y="20" width="280" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="f6A-Ob-P9u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Nd-0l-tQz">
+                                <rect key="frame" x="20" y="99" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you making?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwB-VY-fxS">
+                                <rect key="frame" x="20" y="70" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QAT-f7-d76"/>
+                                    <constraint firstAttribute="width" constant="172" id="QZd-df-0TG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add some ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brh-aC-kCO">
+                                <rect key="frame" x="20" y="137" width="168" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="bEO-6C-gdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbf-mi-gj5">
+                                <rect key="frame" x="196" y="138" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addIngredientButton:" destination="xXk-Eh-58t" eventType="touchUpInside" id="dlJ-nD-eaH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CG-49-wNR">
+                                <rect key="frame" x="125" y="400" width="70" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="UeR-Q1-qf7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButton:" destination="xXk-Eh-58t" eventType="touchUpInside" id="lIi-QP-Dau"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CVP-7q-ZzG" firstAttribute="top" secondItem="zL5-mg-Kk3" secondAttribute="top" id="67s-4z-ihm"/>
+                            <constraint firstItem="KEt-r4-yqe" firstAttribute="leading" secondItem="CVP-7q-ZzG" secondAttribute="leading" id="6aT-R9-Z4L"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="AXN-7p-A0v" secondAttribute="centerX" id="ACG-gn-J4T"/>
+                            <constraint firstItem="jEI-g9-eve" firstAttribute="top" secondItem="zL5-mg-Kk3" secondAttribute="top" constant="20" symbolic="YES" id="B2t-GN-Yu6"/>
+                            <constraint firstItem="jEI-g9-eve" firstAttribute="leading" secondItem="zL5-mg-Kk3" secondAttribute="leading" constant="20" symbolic="YES" id="CNg-cd-Co3"/>
+                            <constraint firstItem="Brh-aC-kCO" firstAttribute="top" secondItem="7Nd-0l-tQz" secondAttribute="bottom" constant="8" symbolic="YES" id="D1k-8s-2rg"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="zL5-mg-Kk3" secondAttribute="centerX" id="NTs-ul-pbZ"/>
+                            <constraint firstItem="AXN-7p-A0v" firstAttribute="top" secondItem="Brh-aC-kCO" secondAttribute="bottom" constant="8" symbolic="YES" id="Skm-5b-6b1"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="7Nd-0l-tQz" secondAttribute="centerX" id="TFZ-BV-DH2"/>
+                            <constraint firstItem="7Nd-0l-tQz" firstAttribute="top" secondItem="gwB-VY-fxS" secondAttribute="bottom" constant="8" symbolic="YES" id="W45-zA-40k"/>
+                            <constraint firstItem="7Nd-0l-tQz" firstAttribute="leading" secondItem="Brh-aC-kCO" secondAttribute="leading" id="YEu-BV-jVz"/>
+                            <constraint firstItem="7Nd-0l-tQz" firstAttribute="leading" secondItem="gwB-VY-fxS" secondAttribute="leading" id="YQj-Ae-dne"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="top" secondItem="AXN-7p-A0v" secondAttribute="bottom" constant="8" symbolic="YES" id="YTN-vX-g2o"/>
+                            <constraint firstItem="AXN-7p-A0v" firstAttribute="top" secondItem="Lbf-mi-gj5" secondAttribute="bottom" constant="8" symbolic="YES" id="aEb-2i-P0U"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="jEI-g9-eve" secondAttribute="centerX" id="acr-HJ-3oJ"/>
+                            <constraint firstItem="bPs-oh-vue" firstAttribute="top" secondItem="CVP-7q-ZzG" secondAttribute="bottom" constant="49" id="b4K-3f-Guo"/>
+                            <constraint firstItem="jEI-g9-eve" firstAttribute="leading" secondItem="gwB-VY-fxS" secondAttribute="leading" id="bQm-My-w1z"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="CVP-7q-ZzG" secondAttribute="centerX" id="da1-Et-de1"/>
+                            <constraint firstItem="gwB-VY-fxS" firstAttribute="top" secondItem="jEI-g9-eve" secondAttribute="bottom" constant="16" id="hTN-gC-FPM"/>
+                            <constraint firstItem="Brh-aC-kCO" firstAttribute="leading" secondItem="AXN-7p-A0v" secondAttribute="leading" id="kcW-cO-WwP"/>
+                            <constraint firstAttribute="bottom" secondItem="2CG-49-wNR" secondAttribute="bottom" constant="57" id="oR3-aD-HBe"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="top" secondItem="AXN-7p-A0v" secondAttribute="bottom" constant="8" id="qQk-45-6DU"/>
+                            <constraint firstItem="KEt-r4-yqe" firstAttribute="top" secondItem="2CG-49-wNR" secondAttribute="bottom" constant="7" id="qXF-YS-CxP"/>
+                            <constraint firstItem="Lbf-mi-gj5" firstAttribute="leading" secondItem="Brh-aC-kCO" secondAttribute="trailing" constant="8" symbolic="YES" id="qd0-Iz-sex"/>
+                            <constraint firstItem="KEt-r4-yqe" firstAttribute="leading" secondItem="zL5-mg-Kk3" secondAttribute="leading" id="tHd-l7-gLH"/>
+                            <constraint firstItem="2CG-49-wNR" firstAttribute="centerX" secondItem="KEt-r4-yqe" secondAttribute="centerX" id="zOz-dL-5Zx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customTabBar" destination="KEt-r4-yqe" id="pfc-k1-bWs"/>
+                        <outlet property="foodTextField" destination="7Nd-0l-tQz" id="hwJ-ZU-E5W"/>
+                        <outlet property="ingredientTableView" destination="AXN-7p-A0v" id="rFY-bF-Ge6"/>
+                        <segue destination="2hi-st-hef" kind="modal" identifier="recipeOneModal" modalTransitionStyle="crossDissolve" id="ldU-gC-Va6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wh8-eB-xHV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="-686"/>
+        </scene>
+        <!--Enter Recipe View Controller-->
+        <scene sceneID="bGA-Uk-vOj">
+            <objects>
+                <viewController id="2hi-st-hef" customClass="EnterRecipeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F0y-Va-Ktd"/>
+                        <viewControllerLayoutGuide type="bottom" id="unz-7b-crb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ez4-Oj-2le">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hWG-ZF-MYk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking time in minutes?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih7-ZK-pOv">
+                                <rect key="frame" x="20" y="381" width="183" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you cook it?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-xw-4Pk">
+                                <rect key="frame" x="20" y="20" width="172" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Ixj-i8-m8E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a description of the recipe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-lO-k0G">
+                                <rect key="frame" x="20" y="206" width="223" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-sj-ahZ">
+                                <rect key="frame" x="20" y="51" width="280" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSs-0T-pyh">
+                                <rect key="frame" x="20" y="237" width="280" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="lrf-hX-dd5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9v-03-nkw">
+                                <rect key="frame" x="20" y="412" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-ut-wmD">
+                                <rect key="frame" x="230" y="447" width="70" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButton:" destination="2hi-st-hef" eventType="touchUpInside" id="qcw-jT-e6G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-j2-vFt">
+                                <rect key="frame" x="20" y="447" width="54" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="2hi-st-hef" eventType="touchUpInside" id="ZTt-g3-5ae"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RAL-lO-k0G" firstAttribute="leading" secondItem="Wek-sj-ahZ" secondAttribute="leading" id="3wA-nX-KuK"/>
+                            <constraint firstItem="Wek-sj-ahZ" firstAttribute="top" secondItem="BJ7-xw-4Pk" secondAttribute="bottom" constant="8" symbolic="YES" id="4DL-WK-tMx"/>
+                            <constraint firstItem="BJ7-xw-4Pk" firstAttribute="leading" secondItem="ez4-Oj-2le" secondAttribute="leading" constant="20" symbolic="YES" id="4Uv-7Y-yWp"/>
+                            <constraint firstItem="Ih7-ZK-pOv" firstAttribute="top" secondItem="qSs-0T-pyh" secondAttribute="bottom" constant="8" symbolic="YES" id="5bX-Hx-thZ"/>
+                            <constraint firstItem="z9v-03-nkw" firstAttribute="leading" secondItem="Ih7-ZK-pOv" secondAttribute="leading" id="73s-h7-aNs"/>
+                            <constraint firstAttribute="bottom" secondItem="mPc-ut-wmD" secondAttribute="bottom" id="IH1-Md-MI5"/>
+                            <constraint firstItem="mPc-ut-wmD" firstAttribute="trailing" secondItem="qSs-0T-pyh" secondAttribute="trailing" id="LvS-Gx-8fk"/>
+                            <constraint firstAttribute="bottom" secondItem="z9v-03-nkw" secondAttribute="bottom" constant="38" id="MWH-nj-YLX"/>
+                            <constraint firstItem="RAL-lO-k0G" firstAttribute="leading" secondItem="qSs-0T-pyh" secondAttribute="leading" id="Tqd-Bv-3pV"/>
+                            <constraint firstItem="z9v-03-nkw" firstAttribute="centerX" secondItem="hWG-ZF-MYk" secondAttribute="centerX" id="TwF-hN-M2R"/>
+                            <constraint firstAttribute="bottom" secondItem="B0N-j2-vFt" secondAttribute="bottom" id="Xtd-8L-uys"/>
+                            <constraint firstItem="z9v-03-nkw" firstAttribute="top" secondItem="Ih7-ZK-pOv" secondAttribute="bottom" constant="8" id="aB9-uz-Ag5"/>
+                            <constraint firstItem="BJ7-xw-4Pk" firstAttribute="leading" secondItem="Wek-sj-ahZ" secondAttribute="leading" id="acQ-fu-JGa"/>
+                            <constraint firstItem="hWG-ZF-MYk" firstAttribute="top" secondItem="ez4-Oj-2le" secondAttribute="top" id="afR-v5-Ke8"/>
+                            <constraint firstItem="RAL-lO-k0G" firstAttribute="top" secondItem="Wek-sj-ahZ" secondAttribute="bottom" constant="8" id="eC1-AU-k2E"/>
+                            <constraint firstItem="BJ7-xw-4Pk" firstAttribute="top" secondItem="ez4-Oj-2le" secondAttribute="top" constant="20" symbolic="YES" id="esN-to-1F5"/>
+                            <constraint firstItem="hWG-ZF-MYk" firstAttribute="leading" secondItem="ez4-Oj-2le" secondAttribute="leading" id="jNK-3u-Wnl"/>
+                            <constraint firstItem="mPc-ut-wmD" firstAttribute="trailing" secondItem="z9v-03-nkw" secondAttribute="trailing" id="jeD-10-8Iv"/>
+                            <constraint firstItem="B0N-j2-vFt" firstAttribute="leading" secondItem="z9v-03-nkw" secondAttribute="leading" id="oqG-Ny-y32"/>
+                            <constraint firstItem="qSs-0T-pyh" firstAttribute="leading" secondItem="Ih7-ZK-pOv" secondAttribute="leading" id="p9n-Py-uMt"/>
+                            <constraint firstAttribute="trailing" secondItem="mPc-ut-wmD" secondAttribute="trailing" constant="20" symbolic="YES" id="tHd-db-vl7"/>
+                            <constraint firstItem="mPc-ut-wmD" firstAttribute="bottom" secondItem="hWG-ZF-MYk" secondAttribute="bottom" id="uQt-FQ-Yk5"/>
+                            <constraint firstItem="qSs-0T-pyh" firstAttribute="top" secondItem="RAL-lO-k0G" secondAttribute="bottom" constant="8" id="w3g-Yt-aue"/>
+                            <constraint firstItem="mPc-ut-wmD" firstAttribute="trailing" secondItem="Wek-sj-ahZ" secondAttribute="trailing" id="wcy-AL-oaC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cookingProcessTextField" destination="Wek-sj-ahZ" id="KLn-7f-tyF"/>
+                        <outlet property="cookingTimeTextField" destination="z9v-03-nkw" id="tLs-M3-Wd4"/>
+                        <outlet property="descriptionTextField" destination="qSs-0T-pyh" id="gkj-J0-CaU"/>
+                        <segue destination="xXk-Eh-58t" kind="modal" identifier="firstRecipeEntryModal" modalTransitionStyle="crossDissolve" id="47B-Ss-VVd"/>
+                        <segue destination="U2d-gc-gbw" kind="modal" identifier="recipeToImageModal" modalTransitionStyle="crossDissolve" id="8Xh-mh-n7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdS-YV-29y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="-686"/>
+        </scene>
+        <!--Add Image View Controller-->
+        <scene sceneID="6iB-Mm-LDV">
+            <objects>
+                <viewController id="U2d-gc-gbw" customClass="AddImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QYI-XB-l0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Upc-ku-hj1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfo-P8-D9A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="phH-Hj-ugA">
+                                <rect key="frame" x="-160" y="-152" width="640" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suS-vW-ibR">
+                                <rect key="frame" x="160" y="52" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the burger to choose an image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxy-Va-hmk">
+                                <rect key="frame" x="32" y="26" width="256" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an image of your recipe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-mE-DWz">
+                                <rect key="frame" x="58" y="45" width="204" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="UeV-Lb-9AZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humburger-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Drz-jY-v95">
+                                <rect key="frame" x="20" y="100" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="32l-my-tHG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWW-1M-29c">
+                                <rect key="frame" x="20" y="161" width="280" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="i4x-Qd-aT5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImage:" destination="U2d-gc-gbw" eventType="touchUpInside" id="AAh-u7-2gV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Io9-ny-661">
+                                <rect key="frame" x="136" y="447" width="49" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Ready">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishButton:" destination="U2d-gc-gbw" eventType="touchUpInside" id="U6D-Wn-mxm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="suS-vW-ibR" firstAttribute="centerX" secondItem="RHY-mE-DWz" secondAttribute="centerX" id="1gH-nz-WSx"/>
+                            <constraint firstItem="WWW-1M-29c" firstAttribute="leading" secondItem="Drz-jY-v95" secondAttribute="leading" id="243-FW-IdV"/>
+                            <constraint firstItem="Drz-jY-v95" firstAttribute="trailing" secondItem="WWW-1M-29c" secondAttribute="trailing" id="59s-VX-pEY"/>
+                            <constraint firstItem="phH-Hj-ugA" firstAttribute="centerX" secondItem="RHY-mE-DWz" secondAttribute="centerX" id="FOg-zJ-hbt"/>
+                            <constraint firstItem="xxy-Va-hmk" firstAttribute="top" secondItem="QYI-XB-l0f" secondAttribute="bottom" constant="6" id="JIx-jk-x23"/>
+                            <constraint firstItem="Upc-ku-hj1" firstAttribute="top" secondItem="Io9-ny-661" secondAttribute="bottom" id="RaS-BN-jO0"/>
+                            <constraint firstItem="WWW-1M-29c" firstAttribute="centerX" secondItem="Io9-ny-661" secondAttribute="centerX" id="Sfw-Qr-8T3"/>
+                            <constraint firstItem="suS-vW-ibR" firstAttribute="centerX" secondItem="xxy-Va-hmk" secondAttribute="centerX" id="ZV4-BF-Xjt"/>
+                            <constraint firstItem="suS-vW-ibR" firstAttribute="centerX" secondItem="WWW-1M-29c" secondAttribute="centerX" id="dnY-Im-bxO"/>
+                            <constraint firstItem="WWW-1M-29c" firstAttribute="top" secondItem="RHY-mE-DWz" secondAttribute="bottom" constant="93" id="ih7-Om-YhG"/>
+                            <constraint firstItem="Drz-jY-v95" firstAttribute="leading" secondItem="cfo-P8-D9A" secondAttribute="leading" constant="20" symbolic="YES" id="qXY-Xv-wKU"/>
+                            <constraint firstAttribute="trailing" secondItem="WWW-1M-29c" secondAttribute="trailing" constant="20" symbolic="YES" id="tdg-8L-Ye9"/>
+                            <constraint firstItem="phH-Hj-ugA" firstAttribute="top" secondItem="cfo-P8-D9A" secondAttribute="top" constant="-152" id="tni-AL-fCi"/>
+                            <constraint firstItem="xxy-Va-hmk" firstAttribute="leading" secondItem="cfo-P8-D9A" secondAttribute="leading" constant="32" id="xT9-mR-2Ns"/>
+                            <constraint firstItem="suS-vW-ibR" firstAttribute="top" secondItem="cfo-P8-D9A" secondAttribute="top" constant="52" id="yun-6M-hMW"/>
+                            <constraint firstItem="Drz-jY-v95" firstAttribute="centerY" secondItem="cfo-P8-D9A" secondAttribute="centerY" id="zSO-id-vXv"/>
+                            <constraint firstItem="RHY-mE-DWz" firstAttribute="top" secondItem="QYI-XB-l0f" secondAttribute="bottom" constant="25" id="zVa-o8-7Kh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="finishLabel" destination="suS-vW-ibR" id="iUC-sg-b46"/>
+                        <outlet property="recipeImage" destination="Drz-jY-v95" id="kLe-di-YBu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUl-ji-9d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="-686"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="640" height="960"/>
+        <image name="humburger-512.png" width="512" height="512"/>
+        <image name="pen.png" width="32" height="32"/>
+        <image name="plus-32.png" width="32" height="32"/>
+        <image name="tomato-32.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

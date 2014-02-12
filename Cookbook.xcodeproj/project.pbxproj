@@ -32,6 +32,12 @@
 		DD28C435189C8120005C30F0 /* launchRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = DD28C433189C8120005C30F0 /* launchRetina.png */; };
 		DD28C438189C82EF005C30F0 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = DD28C437189C82EF005C30F0 /* AppIcon57x57.png */; };
 		DD28C43A189C85DB005C30F0 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = DD28C439189C85DB005C30F0 /* AppIcon76x76.png */; };
+		DD84C88F18A9BA51002913F0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C88E18A9BA51002913F0 /* MoreViewController.m */; };
+		DD84C89318A9BA8D002913F0 /* SectionsAndImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C89218A9BA8D002913F0 /* SectionsAndImages.m */; };
+		DD84C89518AB00C4002913F0 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84C89418AB00C4002913F0 /* New.storyboard */; };
+		DD84C89718AB00CE002913F0 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84C89618AB00CE002913F0 /* List.storyboard */; };
+		DD84C89918AB00D5002913F0 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84C89818AB00D5002913F0 /* More.storyboard */; };
+		DD84C89D18AB042E002913F0 /* TabBarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C89C18AB042E002913F0 /* TabBarControl.m */; };
 		DDA1F792188AF5D30001BE59 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F791188AF5D30001BE59 /* background.png */; };
 		DDA1F796188B398E0001BE59 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F795188B398E0001BE59 /* recipes.plist */; };
 		DDA1F799188B71DB0001BE59 /* EnterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA1F798188B71DB0001BE59 /* EnterRecipeViewController.m */; };
@@ -58,7 +64,7 @@
 		DDE3A63D188A0F990090342D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDE3A63B188A0F990090342D /* InfoPlist.strings */; };
 		DDE3A63F188A0F990090342D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE3A63E188A0F990090342D /* main.m */; };
 		DDE3A643188A0F990090342D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE3A642188A0F990090342D /* AppDelegate.m */; };
-		DDE3A646188A0F990090342D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE3A644188A0F990090342D /* Main.storyboard */; };
+		DDE3A646188A0F990090342D /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE3A644188A0F990090342D /* Recipes.storyboard */; };
 		DDE3A649188A0F990090342D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE3A648188A0F990090342D /* ViewController.m */; };
 		DDE3A64B188A0F990090342D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE3A64A188A0F990090342D /* Images.xcassets */; };
 		DDE3A652188A0F990090342D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE3A651188A0F990090342D /* XCTest.framework */; };
@@ -111,6 +117,15 @@
 		DD28C433189C8120005C30F0 /* launchRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchRetina.png; sourceTree = "<group>"; };
 		DD28C437189C82EF005C30F0 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
 		DD28C439189C85DB005C30F0 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		DD84C88D18A9BA51002913F0 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		DD84C88E18A9BA51002913F0 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		DD84C89118A9BA8D002913F0 /* SectionsAndImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionsAndImages.h; sourceTree = "<group>"; };
+		DD84C89218A9BA8D002913F0 /* SectionsAndImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionsAndImages.m; sourceTree = "<group>"; };
+		DD84C89418AB00C4002913F0 /* New.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = New.storyboard; sourceTree = "<group>"; };
+		DD84C89618AB00CE002913F0 /* List.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		DD84C89818AB00D5002913F0 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		DD84C89B18AB042E002913F0 /* TabBarControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarControl.h; sourceTree = "<group>"; };
+		DD84C89C18AB042E002913F0 /* TabBarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarControl.m; sourceTree = "<group>"; };
 		DDA1F791188AF5D30001BE59 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DDA1F795188B398E0001BE59 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 		DDA1F797188B71DA0001BE59 /* EnterRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterRecipeViewController.h; sourceTree = "<group>"; };
@@ -156,7 +171,7 @@
 		DDE3A640188A0F990090342D /* Cookbook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cookbook-Prefix.pch"; sourceTree = "<group>"; };
 		DDE3A641188A0F990090342D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDE3A642188A0F990090342D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DDE3A645188A0F990090342D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDE3A645188A0F990090342D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Recipes.storyboard; sourceTree = "<group>"; };
 		DDE3A647188A0F990090342D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDE3A648188A0F990090342D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDE3A64A188A0F990090342D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -242,6 +257,28 @@
 				DD28C433189C8120005C30F0 /* launchRetina.png */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		DD84C89018A9BA5E002913F0 /* More View */ = {
+			isa = PBXGroup;
+			children = (
+				DD84C88D18A9BA51002913F0 /* MoreViewController.h */,
+				DD84C88E18A9BA51002913F0 /* MoreViewController.m */,
+				DD84C89118A9BA8D002913F0 /* SectionsAndImages.h */,
+				DD84C89218A9BA8D002913F0 /* SectionsAndImages.m */,
+			);
+			name = "More View";
+			sourceTree = "<group>";
+		};
+		DD84C89A18AB00DC002913F0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DDE3A644188A0F990090342D /* Recipes.storyboard */,
+				DD84C89418AB00C4002913F0 /* New.storyboard */,
+				DD84C89618AB00CE002913F0 /* List.storyboard */,
+				DD84C89818AB00D5002913F0 /* More.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		DDD1B0F31894A29A0026C7EC /* Add Recipe */ = {
@@ -372,9 +409,12 @@
 			children = (
 				DDE3A641188A0F990090342D /* AppDelegate.h */,
 				DDE3A642188A0F990090342D /* AppDelegate.m */,
-				DDE3A644188A0F990090342D /* Main.storyboard */,
+				DD84C89B18AB042E002913F0 /* TabBarControl.h */,
+				DD84C89C18AB042E002913F0 /* TabBarControl.m */,
+				DD84C89A18AB00DC002913F0 /* Storyboards */,
 				DDA1F79F188CAE720001BE59 /* RecipeListViewController.h */,
 				DDA1F7A0188CAE720001BE59 /* RecipeListViewController.m */,
+				DD84C89018A9BA5E002913F0 /* More View */,
 				DDD1B124189861ED0026C7EC /* Misc */,
 				DDD1B128189862380026C7EC /* Image Manage */,
 				DDD1B10518960D1D0026C7EC /* List */,
@@ -514,16 +554,18 @@
 				DDD1B10118960AE20026C7EC /* pen@2x.png in Resources */,
 				DDE3A63D188A0F990090342D /* InfoPlist.strings in Resources */,
 				DD13BD2718921CC900520A26 /* plus-32@2x.png in Resources */,
-				DDE3A646188A0F990090342D /* Main.storyboard in Resources */,
+				DDE3A646188A0F990090342D /* Recipes.storyboard in Resources */,
 				DD28C430189C7BE3005C30F0 /* iTunesArtwork@2x.png in Resources */,
 				DD28C424189C7BE3005C30F0 /* AppIcon40x40@2x.png in Resources */,
 				DD28C429189C7BE3005C30F0 /* AppIcon60x60.png in Resources */,
 				DD28C438189C82EF005C30F0 /* AppIcon57x57.png in Resources */,
 				DDA1F796188B398E0001BE59 /* recipes.plist in Resources */,
+				DD84C89918AB00D5002913F0 /* More.storyboard in Resources */,
 				DD13BD2818921CC900520A26 /* facebook-32@2x.png in Resources */,
 				DD28C421189C7BE3005C30F0 /* AppIcon29x29.png in Resources */,
 				DD28C42E189C7BE3005C30F0 /* AppIcon76x76@2x.png in Resources */,
 				DDE3A673188A22440090342D /* Agilis.otf in Resources */,
+				DD84C89518AB00C4002913F0 /* New.storyboard in Resources */,
 				DD28C422189C7BE3005C30F0 /* AppIcon29x29@2x.png in Resources */,
 				DD28C426189C7BE3005C30F0 /* AppIcon50x50@2x.png in Resources */,
 				DD28C434189C8120005C30F0 /* launchDefault.png in Resources */,
@@ -536,6 +578,7 @@
 				DDE3A66F188A123B0090342D /* facebook-32.png in Resources */,
 				DD28C425189C7BE3005C30F0 /* AppIcon50x50.png in Resources */,
 				DD28C42B189C7BE3005C30F0 /* AppIcon72x72.png in Resources */,
+				DD84C89718AB00CE002913F0 /* List.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +607,7 @@
 				DDD1B119189707D20026C7EC /* CompileIngredients.m in Sources */,
 				DDD1B0FA1894BAC70026C7EC /* DisplayAlerts.m in Sources */,
 				DDE3A643188A0F990090342D /* AppDelegate.m in Sources */,
+				DD84C89318A9BA8D002913F0 /* SectionsAndImages.m in Sources */,
 				DDA1F7A1188CAE720001BE59 /* RecipeListViewController.m in Sources */,
 				DDD1B10418960D130026C7EC /* LargeListViewController.m in Sources */,
 				DDD1B0FD1895EE8A0026C7EC /* SaveCurrentList.m in Sources */,
@@ -571,9 +615,11 @@
 				DD13BD1F1890B92800520A26 /* DisplayContentViewController.m in Sources */,
 				DDA1F79E188C4E0A0001BE59 /* AddImageViewController.m in Sources */,
 				DDD1B10C18960F410026C7EC /* ManageLists.m in Sources */,
+				DD84C89D18AB042E002913F0 /* TabBarControl.m in Sources */,
 				DDE3A63F188A0F990090342D /* main.m in Sources */,
 				DDD1B1271898622C0026C7EC /* ViewImageViewController.m in Sources */,
 				DDA1F799188B71DB0001BE59 /* EnterRecipeViewController.m in Sources */,
+				DD84C88F18A9BA51002913F0 /* MoreViewController.m in Sources */,
 				DDD1B123189861E50026C7EC /* ChangeImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,12 +651,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		DDE3A644188A0F990090342D /* Main.storyboard */ = {
+		DDE3A644188A0F990090342D /* Recipes.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DDE3A645188A0F990090342D /* Base */,
 			);
-			name = Main.storyboard;
+			name = Recipes.storyboard;
 			sourceTree = "<group>";
 		};
 		DDE3A65A188A0F990090342D /* InfoPlist.strings */ = {
