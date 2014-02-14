@@ -74,7 +74,11 @@ NSMutableArray *compiledFoods;
     if(imageChanged){
         [self writeData];
         [self writeImage];
-        [self performSegueWithIdentifier:@"finishModal" sender:self];
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Recipes" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
     } else {
         UIAlertView *av = [[UIAlertView alloc] init];
         av.tag = 40;
@@ -98,8 +102,10 @@ NSMutableArray *compiledFoods;
     if(buttonIndex == 0 && alertView.tag == 40){
         [self writeData];
         [self writeImage];
-        [self performSegueWithIdentifier:@"finishModal" sender:self];
-    }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Recipes" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];    }
     if(buttonIndex == 1 && alertView.tag == 40){
         //Close alert, try again
         [alertView dismissWithClickedButtonIndex:1 animated:YES];

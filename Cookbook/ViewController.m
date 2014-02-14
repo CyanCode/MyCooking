@@ -106,12 +106,26 @@ NSString *filePath;
 
 - (void) tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     if(tabBar.selectedItem == [tabBar.items objectAtIndex:0]){
-        NSLog(@"Selected tomato");
-        [self performSegueWithIdentifier:@"toRecipeFromNewModal" sender:self];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Recipes" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        [self presentViewController:vc animated:NO completion:nil];
+    } if(tabBar.selectedItem == [tabBar.items objectAtIndex:1]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"New" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
     } if(tabBar.selectedItem == [tabBar.items objectAtIndex:2]){
-        NSLog(@"Selected List");
-        [self performSegueWithIdentifier:@"toRecipeList" sender:self];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"List" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
+    } if(tabBar.selectedItem == [tabBar.items objectAtIndex:3]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"More" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
     }
+
 }
 
 #pragma mark - UITableView Datasource

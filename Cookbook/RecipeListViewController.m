@@ -9,6 +9,7 @@
 #import "RecipeListViewController.h"
 #import "DisplayContentViewController.h"
 #import "MoreViewController.h"
+#import "ViewController.h"
 
 @interface RecipeListViewController ()
 
@@ -51,16 +52,26 @@
 }
 
 - (void) tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    if(tabBar.selectedItem == [tabBar.items objectAtIndex:0]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Recipes" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        [self presentViewController:vc animated:NO completion:nil];
+    }
     if(tabBar.selectedItem == [tabBar.items objectAtIndex:1]){
-        NSLog(@"Selected Plus");
-        [self performSegueWithIdentifier:@"toNewFromRecipe" sender:self];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"New" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
     } if(tabBar.selectedItem == [tabBar.items objectAtIndex:2]){
-        NSLog(@"Selected fb");
-        [self performSegueWithIdentifier:@"toRecipeList" sender:self];
-    } if (tabBar.selectedItem == [tabBar.items objectAtIndex:3]){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"List" bundle:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
+    } if(tabBar.selectedItem == [tabBar.items objectAtIndex:3]){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"More" bundle:nil];
-        MoreViewController *mvc = (MoreViewController *)[storyboard instantiateViewControllerWithIdentifier:@"MoreViewController"];
-        [self presentViewController:mvc animated:YES completion:nil];
+        UIViewController *vc = [storyboard instantiateInitialViewController];
+        vc.modalTransitionStyle = UIModalPresentationNone;
+        [self presentViewController:vc animated:NO completion:nil];
     }
 }
 

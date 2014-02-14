@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="lAa-1t-iXw">
             <objects>
-                <viewController id="xXk-Eh-58t" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewViewController" id="xXk-Eh-58t" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LlM-Bo-S0V"/>
                         <viewControllerLayoutGuide type="bottom" id="bPs-oh-vue"/>
@@ -35,7 +35,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEt-r4-yqe" customClass="NavigationTabBar">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KEt-r4-yqe">
                                 <rect key="frame" x="0.0" y="430" width="320" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

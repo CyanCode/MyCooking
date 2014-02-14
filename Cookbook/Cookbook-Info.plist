@@ -41,7 +41,7 @@
 		<string>Agilis.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Recipes</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -1,16 +1,16 @@
 //
-//  SectionsAndImages.h
+//  GetCellData.h
 //  Cookbook
 //
-//  Created by Walker Christie on 2/10/14.
+//  Created by Walker Christie on 2/13/14.
 //  Copyright (c) 2014 Walker Christie. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface SectionsAndImages : NSObject
+@interface GetCellData : NSObject
 
 - (NSArray *)loadImages;
-- (NSArray *)loadSections;
+- (NSArray *)loadCalories;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
-@interface MoreViewController : ViewController
+@interface MoreViewController : ViewController <UITabBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (strong, nonatomic) IBOutlet UITabBar *customTabBar;
+@property (nonatomic, weak) IBOutlet UICollectionView *collection;
 
 @end
