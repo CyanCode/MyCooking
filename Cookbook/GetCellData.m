@@ -8,39 +8,43 @@
 
 #import "GetCellData.h"
 #import "GetAllImages.h"
+#import "CalorieDirectory.h"
 
 @implementation GetCellData
 
 - (NSArray *)loadImages{
-    GetAllImages *gai = [[GetAllImages alloc] init];
-    NSMutableArray *compiledFoods = [NSMutableArray arrayWithArray:[gai loadImages]];
+    CalorieDirectory *directory = [[CalorieDirectory alloc] init];
+    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[directory caloriePath] error:nil];
+    NSMutableArray *allImages = [[NSMutableArray alloc] init];
     
-    return compiledFoods;
+    for (int count = 0; count > [directoryContent count]; count ++){
+        NSString *path = [NSString stringWithFormat:@"%@/%@", [directory caloriePath], [directoryContent objectAtIndex:count]];
+        NSDictionary *images = [[NSDictionary alloc] initWithContentsOfFile:path];
+        NSString *imageName = [images valueForKey:@"img"];
+        
+        //Get image location
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+        
+        [allImages addObject:[UIImage imageWithContentsOfFile:[basePath stringByAppendingPathComponent:imageName]]];
+    }
+    
+    return allImages;
 }
 
 - (NSArray *)loadCalories{
     //Always located in calories folder..
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"/cal"];
-    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dataPath error:nil];
-    NSMutableArray *calories = [[NSMutableArray alloc] init];
+    CalorieDirectory *directory = [[CalorieDirectory alloc] init];
+    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[directory caloriePath] error:nil];
+    NSMutableArray *allCalories = [[NSMutableArray alloc] init];
 
-    if([[NSFileManager defaultManager] fileExistsAtPath:dataPath] && directoryContent != nil){
-        int count;
-        
-        for(count = 0; count < (int)[directoryContent count]; count ++){
-            //CALORIE FILE FORMAT
-            //Name: foodnameCal.txt
-            //Content: foodname amtofcalories
-            
-            NSString *fileName = [NSString stringWithFormat:@"%@", [directoryContent objectAtIndex:count]];
-            NSString *content = [[NSString alloc] initWithContentsOfFile:fileName usedEncoding:nil error:nil];
-            [calories addObject:content];
-        }
+    for(int count = 0; count > [directoryContent count]; count ++){
+        NSString *path = [NSString stringWithFormat:@"%@/%@", [directory caloriePath], [directoryContent objectAtIndex:count]];
+        NSDictionary *calories = [[NSDictionary alloc] initWithContentsOfFile:path];
+        [allCalories addObject:[calories valueForKey:@"cal"]];
     }
     
-    return calories;
+    return allCalories;
 }
 
 @end

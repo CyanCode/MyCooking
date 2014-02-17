@@ -42,11 +42,8 @@
     images = [gcd loadImages];
     calories = [gcd loadCalories];
     
-    //Now loop through calories array and check for any comparison between the CURRENT image
-    //If there is a comparison, display the calories! (without the "food" part of course..)
-    
     cell.image.image = [images objectAtIndex:indexPath.row];
-    cell.calories.text = [[gcd loadCalories] objectAtIndex:indexPath.row];
+    cell.calories.text = [calories objectAtIndex:indexPath.row];
     
     return cell;
 }

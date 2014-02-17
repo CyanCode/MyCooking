@@ -47,6 +47,7 @@
 		DD84C8B818ADB472002913F0 /* CaloriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8B718ADB472002913F0 /* CaloriesCell.m */; };
 		DD84C8BB18ADB4B5002913F0 /* GetCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8BA18ADB4B5002913F0 /* GetCellData.m */; };
 		DD84C8BE18ADB68B002913F0 /* GetAllImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8BD18ADB68B002913F0 /* GetAllImages.m */; };
+		DD84C8C718B01164002913F0 /* CalorieDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8C618B01164002913F0 /* CalorieDirectory.m */; };
 		DDA1F792188AF5D30001BE59 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F791188AF5D30001BE59 /* background.png */; };
 		DDA1F796188B398E0001BE59 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F795188B398E0001BE59 /* recipes.plist */; };
 		DDA1F799188B71DB0001BE59 /* EnterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA1F798188B71DB0001BE59 /* EnterRecipeViewController.m */; };
@@ -149,6 +150,8 @@
 		DD84C8BA18ADB4B5002913F0 /* GetCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCellData.m; sourceTree = "<group>"; };
 		DD84C8BC18ADB68B002913F0 /* GetAllImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAllImages.h; sourceTree = "<group>"; };
 		DD84C8BD18ADB68B002913F0 /* GetAllImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAllImages.m; sourceTree = "<group>"; };
+		DD84C8C518B01164002913F0 /* CalorieDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalorieDirectory.h; sourceTree = "<group>"; };
+		DD84C8C618B01164002913F0 /* CalorieDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalorieDirectory.m; sourceTree = "<group>"; };
 		DDA1F791188AF5D30001BE59 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DDA1F795188B398E0001BE59 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 		DDA1F797188B71DA0001BE59 /* EnterRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterRecipeViewController.h; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				DD84C8B718ADB472002913F0 /* CaloriesCell.m */,
 				DD84C8B918ADB4B5002913F0 /* GetCellData.h */,
 				DD84C8BA18ADB4B5002913F0 /* GetCellData.m */,
+				DD84C8C518B01164002913F0 /* CalorieDirectory.h */,
+				DD84C8C618B01164002913F0 /* CalorieDirectory.m */,
 			);
 			name = Calories;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 				DDD1B11C18971CB00026C7EC /* DisplayListViewController.m in Sources */,
 				DD13BD221890BBC100520A26 /* GetCorrectDictionary.m in Sources */,
 				DD84C8AB18AC67D3002913F0 /* OptionsCell.m in Sources */,
+				DD84C8C718B01164002913F0 /* CalorieDirectory.m in Sources */,
 				DDD1B0F61894AD5E0026C7EC /* ListViewController.m in Sources */,
 				DDD1B1161896D1A20026C7EC /* LoadRecipes.m in Sources */,
 				DDD1B119189707D20026C7EC /* CompileIngredients.m in Sources */,
