@@ -48,6 +48,10 @@
 		DD84C8BB18ADB4B5002913F0 /* GetCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8BA18ADB4B5002913F0 /* GetCellData.m */; };
 		DD84C8BE18ADB68B002913F0 /* GetAllImages.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8BD18ADB68B002913F0 /* GetAllImages.m */; };
 		DD84C8C718B01164002913F0 /* CalorieDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8C618B01164002913F0 /* CalorieDirectory.m */; };
+		DD84C8CE18B42904002913F0 /* CalorieTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8CD18B42904002913F0 /* CalorieTableCell.m */; };
+		DD84C8D518B42A04002913F0 /* SetCalorieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8D418B42A04002913F0 /* SetCalorieViewController.m */; };
+		DD84C8D818B44C34002913F0 /* SelectFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8D718B44C34002913F0 /* SelectFoodViewController.m */; };
+		DD84C8DC18B44ED1002913F0 /* LoadAvailableRecipes.m in Sources */ = {isa = PBXBuildFile; fileRef = DD84C8DB18B44ED1002913F0 /* LoadAvailableRecipes.m */; };
 		DDA1F792188AF5D30001BE59 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F791188AF5D30001BE59 /* background.png */; };
 		DDA1F796188B398E0001BE59 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDA1F795188B398E0001BE59 /* recipes.plist */; };
 		DDA1F799188B71DB0001BE59 /* EnterRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA1F798188B71DB0001BE59 /* EnterRecipeViewController.m */; };
@@ -152,6 +156,14 @@
 		DD84C8BD18ADB68B002913F0 /* GetAllImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetAllImages.m; sourceTree = "<group>"; };
 		DD84C8C518B01164002913F0 /* CalorieDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalorieDirectory.h; sourceTree = "<group>"; };
 		DD84C8C618B01164002913F0 /* CalorieDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalorieDirectory.m; sourceTree = "<group>"; };
+		DD84C8CC18B42904002913F0 /* CalorieTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalorieTableCell.h; sourceTree = "<group>"; };
+		DD84C8CD18B42904002913F0 /* CalorieTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalorieTableCell.m; sourceTree = "<group>"; };
+		DD84C8D318B42A04002913F0 /* SetCalorieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCalorieViewController.h; sourceTree = "<group>"; };
+		DD84C8D418B42A04002913F0 /* SetCalorieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCalorieViewController.m; sourceTree = "<group>"; };
+		DD84C8D618B44C34002913F0 /* SelectFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectFoodViewController.h; sourceTree = "<group>"; };
+		DD84C8D718B44C34002913F0 /* SelectFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectFoodViewController.m; sourceTree = "<group>"; };
+		DD84C8DA18B44ED1002913F0 /* LoadAvailableRecipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadAvailableRecipes.h; sourceTree = "<group>"; };
+		DD84C8DB18B44ED1002913F0 /* LoadAvailableRecipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadAvailableRecipes.m; sourceTree = "<group>"; };
 		DDA1F791188AF5D30001BE59 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DDA1F795188B398E0001BE59 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
 		DDA1F797188B71DA0001BE59 /* EnterRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterRecipeViewController.h; sourceTree = "<group>"; };
@@ -337,16 +349,48 @@
 		DD84C8B518ADB291002913F0 /* Calories */ = {
 			isa = PBXGroup;
 			children = (
-				DD84C8B218ADB28C002913F0 /* CaloriesViewController.h */,
-				DD84C8B318ADB28C002913F0 /* CaloriesViewController.m */,
-				DD84C8B618ADB472002913F0 /* CaloriesCell.h */,
-				DD84C8B718ADB472002913F0 /* CaloriesCell.m */,
+				DD84C8CB18B42839002913F0 /* View Calories */,
+				DD84C8CF18B42908002913F0 /* Set Calories */,
+				DD84C8D918B44C48002913F0 /* Select Food */,
 				DD84C8B918ADB4B5002913F0 /* GetCellData.h */,
 				DD84C8BA18ADB4B5002913F0 /* GetCellData.m */,
 				DD84C8C518B01164002913F0 /* CalorieDirectory.h */,
 				DD84C8C618B01164002913F0 /* CalorieDirectory.m */,
 			);
 			name = Calories;
+			sourceTree = "<group>";
+		};
+		DD84C8CB18B42839002913F0 /* View Calories */ = {
+			isa = PBXGroup;
+			children = (
+				DD84C8B218ADB28C002913F0 /* CaloriesViewController.h */,
+				DD84C8B318ADB28C002913F0 /* CaloriesViewController.m */,
+				DD84C8B618ADB472002913F0 /* CaloriesCell.h */,
+				DD84C8B718ADB472002913F0 /* CaloriesCell.m */,
+			);
+			name = "View Calories";
+			sourceTree = "<group>";
+		};
+		DD84C8CF18B42908002913F0 /* Set Calories */ = {
+			isa = PBXGroup;
+			children = (
+				DD84C8CC18B42904002913F0 /* CalorieTableCell.h */,
+				DD84C8CD18B42904002913F0 /* CalorieTableCell.m */,
+				DD84C8D318B42A04002913F0 /* SetCalorieViewController.h */,
+				DD84C8D418B42A04002913F0 /* SetCalorieViewController.m */,
+			);
+			name = "Set Calories";
+			sourceTree = "<group>";
+		};
+		DD84C8D918B44C48002913F0 /* Select Food */ = {
+			isa = PBXGroup;
+			children = (
+				DD84C8D618B44C34002913F0 /* SelectFoodViewController.h */,
+				DD84C8D718B44C34002913F0 /* SelectFoodViewController.m */,
+				DD84C8DA18B44ED1002913F0 /* LoadAvailableRecipes.h */,
+				DD84C8DB18B44ED1002913F0 /* LoadAvailableRecipes.m */,
+			);
+			name = "Select Food";
 			sourceTree = "<group>";
 		};
 		DDD1B0F31894A29A0026C7EC /* Add Recipe */ = {
@@ -671,6 +715,7 @@
 				DDD1B1201897253B0026C7EC /* SaveList.m in Sources */,
 				DDE3A649188A0F990090342D /* ViewController.m in Sources */,
 				DDD1B11C18971CB00026C7EC /* DisplayListViewController.m in Sources */,
+				DD84C8DC18B44ED1002913F0 /* LoadAvailableRecipes.m in Sources */,
 				DD13BD221890BBC100520A26 /* GetCorrectDictionary.m in Sources */,
 				DD84C8AB18AC67D3002913F0 /* OptionsCell.m in Sources */,
 				DD84C8C718B01164002913F0 /* CalorieDirectory.m in Sources */,
@@ -688,12 +733,15 @@
 				DD84C8B418ADB28C002913F0 /* CaloriesViewController.m in Sources */,
 				DD13BD1F1890B92800520A26 /* DisplayContentViewController.m in Sources */,
 				DDA1F79E188C4E0A0001BE59 /* AddImageViewController.m in Sources */,
+				DD84C8CE18B42904002913F0 /* CalorieTableCell.m in Sources */,
 				DDD1B10C18960F410026C7EC /* ManageLists.m in Sources */,
 				DD84C89D18AB042E002913F0 /* TabBarControl.m in Sources */,
 				DD84C8BB18ADB4B5002913F0 /* GetCellData.m in Sources */,
 				DDE3A63F188A0F990090342D /* main.m in Sources */,
 				DDD1B1271898622C0026C7EC /* ViewImageViewController.m in Sources */,
 				DD84C8BE18ADB68B002913F0 /* GetAllImages.m in Sources */,
+				DD84C8D518B42A04002913F0 /* SetCalorieViewController.m in Sources */,
+				DD84C8D818B44C34002913F0 /* SelectFoodViewController.m in Sources */,
 				DDA1F799188B71DB0001BE59 /* EnterRecipeViewController.m in Sources */,
 				DD84C88F18A9BA51002913F0 /* MoreViewController.m in Sources */,
 				DDD1B123189861E50026C7EC /* ChangeImage.m in Sources */,
